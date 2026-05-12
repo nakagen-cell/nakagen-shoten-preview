@@ -33,6 +33,40 @@
 html {
   font-size: 17px;
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.5rem, 6vw, 1.95rem);
+  }
+
+  .page-title {
+    font-size: clamp(1.4rem, 5.5vw, 1.75rem);
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .business-item-title {
+    font-size: 1.15rem;
+  }
+
+  .contact-phone {
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
+  }
+
+  .info-table th,
+  .info-table td,
+  .qualification-table th,
+  .qualification-table td {
+    font-size: 0.95rem;
+  }
 }
 
 body {
