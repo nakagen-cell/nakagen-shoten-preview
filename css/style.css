@@ -209,6 +209,7 @@ a:hover {
 .media--21x9 { aspect-ratio: 21 / 9; }
 .media--16x9 { aspect-ratio: 16 / 9; }
 .media--4x3 { aspect-ratio: 4 / 3; }
+.media--3x2 { aspect-ratio: 3 / 2; }
 
 /* 画像プレースホルダー（実画像が入るまでの仮表示） */
 .img-placeholder {
