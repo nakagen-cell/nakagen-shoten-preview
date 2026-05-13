@@ -440,6 +440,46 @@ a:hover {
   letter-spacing: 0.05em;
 }
 
+.contact-hours {
+  margin-top: 0.85rem;
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.04em;
+}
+
+.document-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  text-decoration: none;
+  color: var(--color-primary);
+  margin: 1.25rem 0;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.document-link:hover {
+  background-color: rgba(217, 117, 72, 0.06);
+  transform: translateX(2px);
+  color: var(--color-primary);
+}
+
+.document-link-type {
+  display: inline-block;
+  margin-left: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  vertical-align: 0.1em;
+}
+
 .contact-address {
   margin-top: 2rem;
   padding-top: 1.5rem;
