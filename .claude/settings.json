@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\nakag\\\\Documents\\\\play\\\\\" -Recurse -File -ErrorAction SilentlyContinue | Where-Object { $_.Name -match \"ガス|灯油\" } | Select-Object FullName, @{N='KB';E={[Math]::Round\\($_.Length/1KB,1\\)}}, LastWriteTime | Format-Table -AutoSize)"
+    ]
+  }
+}
