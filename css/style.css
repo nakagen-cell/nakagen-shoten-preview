@@ -733,4 +733,82 @@ a:hover {
   .info-table tr:first-child td {
     border-top: none;
   }
+
+  .approach-item-desc {
+    padding-left: 0;
+  }
+}
+
+/* -- 私たちの取り組み -- */
+.approach-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.approach-item:last-child {
+  border-bottom: none;
+}
+
+.approach-item-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.approach-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.approach-item-desc {
+  color: var(--color-text);
+  line-height: 1.9;
+  padding-left: 2.7rem;
+}
+
+/* -- お知らせ・キャンペーン -- */
+.campaign-period {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-light);
+  font-size: 0.98rem;
+  line-height: 1.85;
+}
+
+.campaign-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.campaign-item {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background-color: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campaign-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(44, 72, 112, 0.14);
+}
+
+.campaign-item img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
