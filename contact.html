@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
   <header class="site-header">
@@ -16,7 +16,10 @@
       <a href="index.html" class="site-logo">
         <img src="images/logo.jpg" alt="株式会社中源商店">
       </a>
-      <nav class="site-nav">
+      <button type="button" class="nav-toggle" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
         <ul>
           <li><a href="index.html">トップ</a></li>
           <li><a href="business.html">事業内容</a></li>
@@ -42,7 +45,7 @@
         <div class="contact-card">
           <div class="contact-label">お電話でのお問い合わせ</div>
           <a href="tel:0762424945" class="contact-phone">076-242-4945</a>
-          <p class="contact-hours">営業時間 9:00 - 18:00 / 定休日 日曜日</p>
+          <p class="contact-hours">営業時間 9:00 - 18:00 / 定休日 日曜・祝日</p>
 
           <div class="contact-address">
             <strong>株式会社中源商店</strong>
@@ -81,10 +84,17 @@
       <div class="footer-info">
         <p>〒921-8162 石川県金沢市三馬1丁目406番地</p>
         <p>電話 076-242-4945</p>
-        <p>営業時間 9:00 - 18:00 / 定休日 日曜日</p>
+        <p>営業時間 9:00 - 18:00 / 定休日 日曜・祝日</p>
       </div>
       <div class="footer-copyright">&copy; 株式会社中源商店</div>
     </div>
   </footer>
+
+  <a href="tel:0762424945" class="sticky-phone" aria-label="お電話でのお問い合わせ">
+    <span class="sticky-phone-label">お電話で</span>
+    <span class="sticky-phone-number">076-242-4945</span>
+  </a>
+
+  <script src="js/main.js?v=1" defer></script>
 </body>
 </html>
