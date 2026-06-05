@@ -684,6 +684,11 @@ body {
   overflow: hidden;
 }
 
+/* セクション先頭に置く画像は上余白をセクション側に任せる */
+.page-media:first-child {
+  margin-top: 0;
+}
+
 /* -- 会社概要テーブル -- */
 .info-table {
   width: 100%;
