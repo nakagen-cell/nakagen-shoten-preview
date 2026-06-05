@@ -484,7 +484,7 @@ body {
   margin-bottom: 0.4rem;
 }
 
-/* -- ヒーロー（トップページ） -- */
+/* -- ヒーロー（トップページ・現在は未使用。今後の使用に残置） -- */
 .hero {
   padding: 6rem 0 5rem;
   position: relative;
@@ -494,6 +494,24 @@ body {
   margin-top: 3.5rem;
   box-shadow: var(--shadow-md);
   border-radius: var(--radius);
+}
+
+/* -- ホーム専用ヒーロー（写真のみ） -- */
+.home-hero {
+  padding: 2rem 0 0.5rem;
+}
+
+.home-hero-media {
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    padding: 1.25rem 0 0.5rem;
+  }
 }
 
 .hero-title {
@@ -511,6 +529,18 @@ body {
   color: var(--color-text-light);
   max-width: 36em;
   line-height: 2;
+}
+
+/* -- 会社キャッチコピー -- */
+.company-tagline {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 500;
+  color: var(--color-primary);
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.25rem;
+  padding-left: 0.85rem;
+  border-left: 3px solid var(--color-accent);
 }
 
 /* -- ページヘッダー（トップ以外） -- */
