@@ -600,7 +600,8 @@ body {
 
 /* -- 事業項目（カード型） -- */
 .business-item {
-  margin-bottom: 1.5rem;
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   background-color: var(--color-bg-card);
@@ -676,7 +677,8 @@ body {
 
 /* 単独で配置する画像 */
 .page-media {
-  margin: 3rem 0;
+  max-width: 720px;
+  margin: 3rem auto;
   box-shadow: var(--shadow-md);
   border-radius: var(--radius);
   overflow: hidden;
@@ -1232,6 +1234,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.25rem;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .campaign-item {
