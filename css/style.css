@@ -208,53 +208,47 @@ a:hover {
   }
 }
 
-/* -- スマホ固定の電話CTAバー -- */
+/* -- 固定の電話CTAバー（全画面サイズで表示） -- */
 .sticky-phone {
-  display: none;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  padding: 0.9rem 1rem;
+  text-decoration: none;
+  z-index: 40;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.18);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: background-color var(--transition);
 }
 
-@media (max-width: 768px) {
-  .sticky-phone {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--color-accent);
-    color: #ffffff;
-    padding: 0.9rem 1rem;
-    text-decoration: none;
-    z-index: 40;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.18);
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    transition: background-color var(--transition);
-  }
+.sticky-phone:hover,
+.sticky-phone:active {
+  color: #ffffff;
+  background-color: var(--color-accent-dark);
+}
 
-  .sticky-phone:hover,
-  .sticky-phone:active {
-    color: #ffffff;
-    background-color: var(--color-accent-dark);
-  }
+.sticky-phone-label {
+  font-size: 0.85rem;
+  opacity: 0.95;
+}
 
-  .sticky-phone-label {
-    font-size: 0.85rem;
-    opacity: 0.95;
-  }
+.sticky-phone-number {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
 
-  .sticky-phone-number {
-    font-size: 1.2rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-  }
-
-  /* スマホで固定CTAに隠れないよう本体に下余白 */
-  body {
-    padding-bottom: 58px;
-  }
+/* 固定CTAに隠れないよう本体に下余白 */
+body {
+  padding-bottom: 58px;
 }
 
 .container {
@@ -312,9 +306,9 @@ a:hover {
   mix-blend-mode: multiply;
 }
 
-/* -- ハンバーガーボタン（モバイル時のみ） -- */
+/* -- ハンバーガーボタン（全画面サイズで表示） -- */
 .nav-toggle {
-  display: none;
+  display: inline-flex;
   background: transparent;
   border: 0;
   padding: 0;
@@ -364,21 +358,50 @@ a:hover {
   transform: rotate(-45deg);
 }
 
-/* -- ナビゲーション -- */
+/* -- ナビゲーション（全画面サイズでドロップダウン式） -- */
+.site-nav {
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  right: 0;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.site-nav.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .site-nav ul {
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 0;
   list-style: none;
 }
 
+.site-nav li {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-nav li:last-child {
+  border-bottom: none;
+}
+
 .site-nav a {
+  display: block;
   color: var(--color-text);
   text-decoration: none;
   font-size: 1rem;
   letter-spacing: 0.06em;
-  padding: 0.45rem 0;
-  border-bottom: 2px solid transparent;
-  transition: color var(--transition), border-color var(--transition);
+  padding: 1rem 1.5rem;
+  transition: color var(--transition), background-color var(--transition);
 }
 
 .site-nav a:hover {
@@ -386,8 +409,8 @@ a:hover {
 }
 
 .site-nav a.active {
-  color: var(--color-primary);
-  border-bottom-color: var(--color-accent);
+  color: var(--color-accent);
+  background-color: var(--color-bg-soft);
 }
 
 @media (max-width: 768px) {
@@ -397,55 +420,6 @@ a:hover {
 
   .site-logo img {
     height: 38px;
-  }
-
-  .nav-toggle {
-    display: inline-flex;
-  }
-
-  .site-nav {
-    position: absolute;
-    top: calc(100% + 1px);
-    left: 0;
-    right: 0;
-    background-color: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-8px);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity var(--transition), transform var(--transition);
-  }
-
-  .site-nav.is-open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .site-nav ul {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .site-nav li {
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .site-nav li:last-child {
-    border-bottom: none;
-  }
-
-  .site-nav a {
-    display: block;
-    padding: 1rem 1.5rem;
-    border-bottom: none;
-  }
-
-  .site-nav a.active {
-    color: var(--color-accent);
-    border-bottom: none;
-    background-color: var(--color-bg-soft);
   }
 }
 
