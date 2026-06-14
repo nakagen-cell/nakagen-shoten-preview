@@ -1,0 +1,11 @@
+# 正規URLを https://nakagen-shoten.jp/ に統一する
+# - http でのアクセス        → https へ
+# - www.nakagen-shoten.jp   → nakagen-shoten.jp（www無し）へ
+# いずれも 301（恒久的リダイレクト）でまとめて転送する
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{HTTP_HOST} ^www\.nakagen-shoten\.jp$ [NC,OR]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://nakagen-shoten.jp%{REQUEST_URI} [R=301,L]
+</IfModule>
