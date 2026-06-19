@@ -12,8 +12,10 @@
   <style>
     /* PCでは連絡先と地図を左右2列に並べて余白を活用（スマホは縦積みのまま） */
     @media (min-width: 769px) {
-      .contact-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+      .contact-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: stretch; }
       .contact-cols .page-media { max-width: none; margin: 0; }
+      /* カードを地図と同じ高さに伸ばし、中身を縦中央に配置 */
+      .contact-cols .contact-card { display: flex; flex-direction: column; justify-content: center; }
     }
   </style>
 </head>
