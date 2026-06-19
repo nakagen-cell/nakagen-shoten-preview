@@ -1261,3 +1261,16 @@ body {
   width: 100%;
   height: auto;
 }
+
+/* ===== PC表示の見栄え調整（769px以上のみ／スマホ表示は変更なし）===== */
+@media (min-width: 769px) {
+  /* セクションを全幅の薄い帯で交互に。中央の細い1列に見える単調さ・左右の寂しさを解消 */
+  main > section.section:nth-of-type(odd) {
+    background-color: var(--color-bg-soft);
+  }
+
+  /* 複数画像のギャラリーはPCで横幅を少し広げて余白を活用 */
+  .campaign-grid {
+    max-width: 880px;
+  }
+}

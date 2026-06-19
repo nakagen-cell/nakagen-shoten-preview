@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=11">
   <style>
     .equipment-banner {
       display: block;
@@ -20,6 +20,16 @@
       border-radius: 4px;
     }
     .equipment-banner:last-child { margin-bottom: 0; }
+    @media (min-width: 769px) {
+      .equipment-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        max-width: 1040px;
+        margin: 0 auto;
+      }
+      .equipment-banner { max-width: none; margin: 0; }
+    }
   </style>
 </head>
 <body>
@@ -54,10 +64,12 @@
       <div class="container">
         <p class="section-lead">省エネ・快適・安全なガス機器をご提案しています。各機器の特長をご覧ください。</p>
 
-        <img class="equipment-banner" src="images/gas-clothes-dryer.png" alt="ガス衣類乾燥機：おすすめの理由">
-        <img class="equipment-banner" src="images/eco-jozu.png" alt="エコジョーズの燃費の秘密">
-        <img class="equipment-banner" src="images/gas-stove.png" alt="ガスコンロの便利機能">
-        <img class="equipment-banner" src="images/gas-fan-heater.png" alt="ガスファンヒーターの賢い機能">
+        <div class="equipment-list">
+          <img class="equipment-banner" src="images/gas-clothes-dryer.png" alt="ガス衣類乾燥機：おすすめの理由">
+          <img class="equipment-banner" src="images/eco-jozu.png" alt="エコジョーズの燃費の秘密">
+          <img class="equipment-banner" src="images/gas-stove.png" alt="ガスコンロの便利機能">
+          <img class="equipment-banner" src="images/gas-fan-heater.png" alt="ガスファンヒーターの賢い機能">
+        </div>
       </div>
     </section>
   </main>
