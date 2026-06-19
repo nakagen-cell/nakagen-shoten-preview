@@ -8,7 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=11">
+  <link rel="stylesheet" href="css/style.css?v=12">
+  <style>
+    /* タイル部分を薄い帯にして区切りを出す（PC・スマホ共通） */
+    .quick-tiles-section { background-color: var(--color-bg-soft); }
+    /* PCではタイルを横一列(4列)に広げて余白を活用（スマホは2×2のまま） */
+    @media (min-width: 769px) {
+      .quick-tiles { grid-template-columns: repeat(4, 1fr); max-width: 1040px; }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
