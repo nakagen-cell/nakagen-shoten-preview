@@ -4,11 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ガスのお申込み | 株式会社中源商店</title>
-  <meta name="description" content="株式会社中源商店へのガスのお申し込み（新規ご契約・お引越し）のご案内。準備中です。">
+  <meta name="description" content="お引っ越しに伴うガス閉栓（使用停止）手続きのご案内。株式会社中源商店ではお電話にてお申し込みを承っております。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css?v=12">
+  <style>
+    .apply-box {
+      background-color: var(--color-bg-soft);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 1.5rem 1.75rem;
+      margin: 1.75rem 0;
+    }
+    .apply-box--note { background-color: #fdf6f1; border-color: #ecd6c6; }
+    .apply-box-title { font-weight: 700; color: var(--color-primary); margin-bottom: 0.6rem; }
+    .apply-box p { line-height: 1.9; }
+    .apply-list { list-style: none; padding: 0; margin: 0.6rem 0 0.2rem; }
+    .apply-list li { position: relative; padding: 0.25rem 0 0.25rem 1.4rem; line-height: 1.7; }
+    .apply-list li::before {
+      content: ""; position: absolute; left: 0.2rem; top: 0.7em;
+      width: 7px; height: 7px; background-color: var(--color-accent); border-radius: 50%;
+    }
+    .apply-closing { margin-top: 1.5rem; font-weight: 500; color: var(--color-primary); }
+    @media (max-width: 640px) {
+      .apply-box { padding: 1.25rem 1.25rem; }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -40,15 +62,33 @@
 
     <section class="section">
       <div class="container">
-        <div class="under-construction">
-          <span class="under-construction-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </span>
-          <h2 class="under-construction-title">ただいま準備中です</h2>
-          <p class="under-construction-text">このページは現在準備中です。</p>
-          <p class="under-construction-text">公開までもうしばらくお待ちください。</p>
-          <a href="index.html" class="btn btn--outline under-construction-back">ホームに戻る</a>
+        <p class="section-lead">お引っ越しに伴う、現在ご利用中のガスの使用停止（閉栓）手続きについてご案内します。</p>
+
+        <h2 class="section-title">ガス閉栓（現在のお住まい）について</h2>
+        <p>お引っ越しに伴い、現在ご利用中のガスの使用停止（閉栓）手続きが必要です。下記をご確認のうえ、お電話にてお申し込みください。</p>
+
+        <div class="apply-box">
+          <p class="apply-box-title">お手続きに必要な情報</p>
+          <p>以下の情報をご準備のうえ、お申し込みください。</p>
+          <ul class="apply-list">
+            <li>ご契約者名</li>
+            <li>現住所（アパートなどは部屋番号まで）</li>
+            <li>退去日</li>
+            <li>ご連絡先電話番号</li>
+          </ul>
+          <p>あわせて、閉栓作業の日時をご予約ください。<strong>立ち合いは不要です。</strong></p>
         </div>
+
+        <div class="apply-box apply-box--note">
+          <p class="apply-box-title">ご注意ください</p>
+          <ul class="apply-list">
+            <li>ガス料金の精算方法をご確認ください</li>
+            <li>引っ越しシーズンは混み合いますので、お早めにお申し込みください</li>
+            <li>閉栓のご予約は、お引っ越しの1〜2週間前までにお願いします</li>
+          </ul>
+        </div>
+
+        <p class="apply-closing">お引っ越し日が決まりましたら、お早めにお手続きをお願いいたします。</p>
       </div>
     </section>
   </main>
