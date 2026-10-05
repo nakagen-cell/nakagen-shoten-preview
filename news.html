@@ -12,6 +12,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css?v=15">
+  <style>
+    /* チラシ4ページはPCで2×2に並べる（3+1で余るのを防ぐ） */
+    @media (min-width: 769px) {
+      .campaign-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 820px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -56,10 +65,10 @@
           </li>
           <li class="news-item">
             <div class="news-item-meta">
-              <time class="news-item-date" datetime="2026-09-30">〜2026年9月30日</time>
+              <time class="news-item-date" datetime="2026-12-31">〜2026年12月31日</time>
             </div>
-            <a class="news-item-title" href="#campaign">やっぱりガスだね!!キャンペーン</a>
-            <p class="news-item-excerpt">ガス機器がおトクにお求めいただけるキャンペーンを実施中です。チラシは下記に掲載しています。</p>
+            <a class="news-item-title" href="#campaign">秋の大感謝祭</a>
+            <p class="news-item-excerpt">ビルトインコンロ・ガステーブル・レンジフード・給湯器・衣類乾燥機をおトクにご提供しています。チラシ全4ページを下記に掲載しています。</p>
           </li>
         </ul>
       </div>
@@ -67,15 +76,21 @@
 
     <section class="section" id="campaign">
       <div class="container">
-        <h2 class="section-title">やっぱりガスだね!!キャンペーン</h2>
-        <p class="campaign-period">現在『2026年 やっぱりガスだね!!キャンペーン』(〜2026年9月30日)を実施中です。下記チラシをご確認のうえ、お電話にてお問い合わせください。</p>
+        <h2 class="section-title">秋の大感謝祭</h2>
+        <p class="campaign-period">『秋の大感謝祭』(〜2026年12月31日)を実施中です。ビルトインコンロ・ガステーブルコンロ・レンジフード・給湯器・ガス衣類乾燥機「乾太くん」をおトクにご提供しています。下記チラシ(全4ページ)をご確認のうえ、お電話にてお問い合わせください。<br>画像をクリックすると拡大してご覧いただけます。</p>
 
         <div class="campaign-grid">
-          <a href="images/campaign/1/S__49160202.jpg" class="campaign-item" target="_blank" rel="noopener">
-            <img src="images/campaign/1/S__49160202.jpg" alt="やっぱりガスだね!!キャンペーン チラシ(1/2)">
+          <a href="images/campaign/2/flyer-1.jpg" class="campaign-item" target="_blank" rel="noopener">
+            <img src="images/campaign/2/flyer-1.jpg" alt="秋の大感謝祭 チラシ 1ページ目（ビルトインコンロ・レンジフード・衣類乾燥機 乾太くん）" loading="lazy" width="1240" height="1753">
           </a>
-          <a href="images/campaign/1/S__49160203.jpg" class="campaign-item" target="_blank" rel="noopener">
-            <img src="images/campaign/1/S__49160203.jpg" alt="やっぱりガスだね!!キャンペーン チラシ(2/2)">
+          <a href="images/campaign/2/flyer-2.jpg" class="campaign-item" target="_blank" rel="noopener">
+            <img src="images/campaign/2/flyer-2.jpg" alt="秋の大感謝祭 チラシ 2ページ目（ビルトインコンロ）" loading="lazy" width="1240" height="1753">
+          </a>
+          <a href="images/campaign/2/flyer-3.jpg" class="campaign-item" target="_blank" rel="noopener">
+            <img src="images/campaign/2/flyer-3.jpg" alt="秋の大感謝祭 チラシ 3ページ目（ガステーブルコンロ・レンジフード）" loading="lazy" width="1240" height="1753">
+          </a>
+          <a href="images/campaign/2/flyer-4.jpg" class="campaign-item" target="_blank" rel="noopener">
+            <img src="images/campaign/2/flyer-4.jpg" alt="秋の大感謝祭 チラシ 4ページ目（おすすめ給湯器）" loading="lazy" width="1240" height="1753">
           </a>
         </div>
       </div>
