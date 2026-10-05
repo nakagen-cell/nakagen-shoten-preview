@@ -1268,6 +1268,20 @@ main > section.section:nth-of-type(odd) {
   background-color: var(--color-bg-soft);
 }
 
+/* 本文セクションの行長を詰める（PCで1行59文字→約46文字）。
+   ヘッダー/フッター/ページ見出し/電話バーは全幅のまま。
+   内側の画像グリッド等は各自のmax-widthで中央寄せされる。 */
+@media (min-width: 769px) {
+  .section > .container {
+    max-width: 880px;
+  }
+
+  /* 横並びのカードや地図など、幅が要る箇所だけ従来の全幅に戻す */
+  .section > .container--wide {
+    max-width: var(--max-width);
+  }
+}
+
 /* PC（769px以上）のみの調整 */
 @media (min-width: 769px) {
   /* 複数画像のギャラリーはPCで横幅を少し広げて余白を活用 */
